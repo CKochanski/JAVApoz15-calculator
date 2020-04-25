@@ -1,5 +1,6 @@
 package pl.sda.spring;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import pl.sda.spring.operation.Operation;
 import pl.sda.spring.operation.OperationType;
@@ -11,6 +12,7 @@ class Calculator {
 
     private final List<Operation> operations;
 
+    @Autowired
     Calculator(List<Operation> operations) {
         this.operations = operations;
     }
